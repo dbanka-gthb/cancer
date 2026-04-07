@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cancer Se Pehle Suraksha — Preventing Cervical Cancer Before It Starts</title>
+<meta name="description" content="A Lions Club initiative vaccinating 1,500 girls aged 9–13 in tribal ashram schools across Palghar and Mumbai against cervical cancer. June 2026–2027.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --green: #1a6b3a;
+    --green-mid: #2d8c52;
+    --green-light: #e8f5ee;
+    --gold: #c8930a;
+    --gold-light: #fdf6e3;
+    --navy: #12243a;
+    --warm-white: #fdfcf8;
+    --text: #1a1a1a;
+    --muted: #5a5a5a;
+    --border: rgba(0,0,0,0.09);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Trebuchet MS', Arial, sans-serif; color: var(--text); background: var(--warm-white); line-height: 1.6; }
+  h1, h2, h3, h4 { font-family: Garamond, 'Times New Roman', serif; }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(253,252,248,0.97); backdrop-filter: blur(8px); border-bottom: 0.5px solid var(--border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .nav-logo { font-family: Garamond, serif; font-size: 17px; font-weight: bold; color: var(--navy); }
+  .nav-logo span { color: var(--green); }
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
+  .nav-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--text); }
+  .nav-cta { background: var(--green); color: white !important; padding: 8px 20px; border-radius: 100px; font-size: 13px; font-weight: bold; transition: opacity 0.2s; }
+  .nav-cta:hover { opacity: 0.85; }
+  .nav-hamburger { display: none; background: none; border: none; cursor: pointer; font-size: 22px; color: var(--navy); }
+  .urgency { background: var(--navy); color: white; padding: 0.85rem 2rem; text-align: center; font-size: 13px; line-height: 1.5; }
+  .urgency strong { color: #f5cc5a; }
+  .hero { padding: 5rem 2rem 4rem; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: var(--green-light); color: var(--green); font-size: 12px; font-weight: bold; padding: 6px 14px; border-radius: 100px; margin-bottom: 1.5rem; letter-spacing: 0.5px; text-transform: uppercase; }
+  .hero-eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--green); border-radius: 50%; flex-shrink: 0; }
+  h1 { font-size: 3rem; line-height: 1.15; font-weight: bold; color: var(--navy); margin-bottom: 1.25rem; }
+  h1 em { font-style: italic; color: var(--green); }
+  .hero-sub { font-size: 16px; color: var(--muted); line-height: 1.75; margin-bottom: 2rem; }
+  .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+  .btn-primary { background: var(--green); color: white; padding: 13px 28px; border-radius: 100px; font-size: 14px; font-weight: bold; text-decoration: none; transition: all 0.2s; display: inline-block; font-family: 'Trebuchet MS', Arial, sans-serif; }
+  .btn-primary:hover { background: var(--green-mid); transform: translateY(-1px); }
+  .btn-ghost { color: var(--navy); font-size: 14px; font-weight: bold; text-decoration: none; display: flex; align-items: center; gap: 6px; }
+  .btn-ghost:hover { color: var(--green); }
+  .hero-card { background: white; border: 0.5px solid var(--border); border-radius: 20px; padding: 2rem; box-shadow: 0 6px 32px rgba(0,0,0,0.07); }
+  .hero-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+  .hero-stat { background: var(--warm-white); border-radius: 12px; padding: 1rem; }
+  .hero-stat-num { font-family: Garamond, serif; font-size: 2.1rem; font-weight: bold; color: var(--navy); line-height: 1; }
+  .hero-stat-num sup { font-size: 1rem; }
+  .hero-stat-label { font-size: 11px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .progress-section { margin-top: 0.5rem; }
+  .progress-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .progress-label strong { color: var(--text); }
+  .progress-bar { background: #daeae1; border-radius: 100px; height: 8px; overflow: hidden; }
+  .progress-fill { background: var(--green-mid); height: 100%; border-radius: 100px; width: 0%; transition: width 1.5s cubic-bezier(0.4,0,0.2,1); }
+  .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--green-light); color: var(--green); font-size: 11px; font-weight: bold; padding: 5px 12px; border-radius: 100px; margin-top: 1rem; }
+  .stats-section { background: var(--navy); color: white; padding: 4rem 2rem; }
+  .stats-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
+  .stat-num { font-family: Garamond, serif; font-size: 3rem; font-weight: bold; color: #f5cc5a; line-height: 1; }
+  .stat-label { font-size: 13px; color: rgba(255,255,255,0.6); margin-top: 6px; line-height: 1.4; }
+  .section-tag { display: inline-flex; align-items: center; gap: 8px; background: var(--green-light); color: var(--green); font-size: 11px; font-weight: bold; padding: 6px 14px; border-radius: 100px; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+  h2 { font-size: 2.4rem; font-weight: bold; color: var(--navy); line-height: 1.2; }
+  .why-section { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; align-items: start; }
+  .why-card { background: white; border: 0.5px solid var(--border); border-radius: 16px; padding: 1.75rem; transition: box-shadow 0.2s; }
+  .why-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.07); }
+  .why-icon { font-size: 24px; margin-bottom: 1rem; }
+  .why-card h3 { font-size: 16px; color: var(--navy); margin-bottom: 0.5rem; }
+  .why-card p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+  .govt-callout { background: var(--green-light); border: 0.5px solid rgba(26,107,58,0.2); border-radius: 12px; padding: 1.25rem 1.5rem; margin-top: 1rem; }
+  .govt-callout p { font-size: 13px; color: var(--text); line-height: 1.65; }
+  .govt-callout strong { color: var(--green); }
+  .how-section { background: white; padding: 5rem 2rem; }
+  .how-inner { max-width: 1100px; margin: 0 auto; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .step { position: relative; text-align: center; padding: 1.5rem 1rem; }
+  .step-num { width: 40px; height: 40px; background: var(--green); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: bold; margin: 0 auto 1rem; font-family: Garamond, serif; }
+  .step h4 { font-size: 15px; color: var(--navy); margin-bottom: 0.5rem; }
+  .step p { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .step-arrow { position: absolute; right: -8px; top: 28px; color: #bbb; font-size: 20px; }
+  .giving-section { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; }
+  .giving-header { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 3rem; }
+  .giving-intro p { font-size: 15px; color: var(--muted); margin-top: 1rem; line-height: 1.7; }
+  .giving-progress { background: white; border: 0.5px solid var(--border); border-radius: 16px; padding: 1.5rem; }
+  .gp-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.75rem; }
+  .gp-amount { font-family: Garamond, serif; font-size: 1.8rem; color: var(--navy); font-weight: bold; }
+  .gp-amount span { font-size: 0.9rem; color: var(--muted); font-family: 'Trebuchet MS', Arial, sans-serif; font-weight: normal; }
+  .gp-bar { background: #daeae1; border-radius: 100px; height: 10px; margin: 1rem 0; overflow: hidden; }
+  .gp-fill { background: var(--green); height: 100%; border-radius: 100px; width: 0%; transition: width 1.5s cubic-bezier(0.4,0,0.2,1); }
+  .gp-meta { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); }
+  .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .tier { background: white; border: 0.5px solid var(--border); border-radius: 16px; padding: 1.75rem; transition: all 0.2s; position: relative; overflow: hidden; }
+  .tier:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.08); transform: translateY(-2px); }
+  .tier.featured { border: 1.5px solid var(--green); }
+  .tier-badge { position: absolute; top: 1rem; right: 1rem; background: var(--green); color: white; font-size: 10px; font-weight: bold; padding: 3px 10px; border-radius: 100px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .tier-icon { font-size: 28px; margin-bottom: 1rem; }
+  .tier-amount { font-family: Garamond, serif; font-size: 2rem; font-weight: bold; color: var(--navy); line-height: 1; }
+  .tier-amount-usd { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .tier-name { font-family: Garamond, serif; font-size: 16px; color: var(--navy); margin: 0.75rem 0 0.5rem; }
+  .tier-desc { font-size: 12px; color: var(--muted); line-height: 1.55; margin-bottom: 1.25rem; }
+  .tier-btn { display: block; text-align: center; padding: 10px; border-radius: 100px; font-size: 13px; font-weight: bold; text-decoration: none; transition: all 0.2s; cursor: pointer; font-family: 'Trebuchet MS', Arial, sans-serif; }
+  .tier-btn.primary { background: var(--green); color: white; border: none; }
+  .tier-btn.primary:hover { background: var(--green-mid); }
+  .tier-btn.outline { border: 1px solid var(--border); color: var(--navy); background: none; }
+  .tier-btn.outline:hover { background: var(--green-light); border-color: var(--green); }
+  .giving-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 1.5rem; }
+  .story-section { background: var(--navy); color: white; padding: 5rem 2rem; }
+  .story-inner { max-width: 780px; margin: 0 auto; text-align: center; }
+  .story-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(245,204,90,0.15); color: #f5cc5a; font-size: 11px; font-weight: bold; padding: 6px 14px; border-radius: 100px; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
+  .story-inner h2 { color: white; margin-bottom: 1.5rem; }
+  .story-inner p { font-size: 16px; color: rgba(255,255,255,0.68); line-height: 1.8; margin-bottom: 1rem; }
+  .story-inner p strong { color: #f5cc5a; font-weight: bold; }
+  .story-sig { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 0.5px solid rgba(255,255,255,0.1); font-size: 13px; color: rgba(255,255,255,0.4); }
+  .story-sig strong { color: rgba(255,255,255,0.8); font-weight: bold; display: block; font-size: 15px; margin-bottom: 4px; font-family: Garamond, serif; }
+  .partners-section { padding: 3rem 2rem; max-width: 1100px; margin: 0 auto; text-align: center; }
+  .partners-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 1.5rem; }
+  .partners-row { display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap; }
+  .partner-pill { background: white; border: 0.5px solid var(--border); border-radius: 100px; padding: 8px 20px; font-size: 13px; color: var(--muted); }
+  .faq-section { max-width: 700px; margin: 0 auto; padding: 4rem 2rem; }
+  .faq-section h2 { margin-bottom: 2rem; }
+  .faq-item { border-bottom: 0.5px solid var(--border); padding: 1.25rem 0; cursor: pointer; }
+  .faq-q { display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: bold; color: var(--navy); gap: 1rem; font-family: Garamond, serif; }
+  .faq-toggle { color: var(--green); font-size: 22px; font-weight: normal; flex-shrink: 0; line-height: 1; }
+  .faq-a { font-size: 13px; color: var(--muted); line-height: 1.7; margin-top: 0.75rem; display: none; }
+  .faq-a.open { display: block; }
+  footer { background: var(--navy); color: white; padding: 3rem 2rem 2rem; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+  .footer-brand { font-family: Garamond, serif; font-size: 18px; font-weight: bold; color: white; margin-bottom: 0.75rem; }
+  .footer-brand span { color: #90d4a8; }
+  .footer-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.6; }
+  .footer-col h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.3); margin-bottom: 1rem; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.55); text-decoration: none; margin-bottom: 0.5rem; transition: color 0.2s; }
+  .footer-col a:hover { color: white; }
+  .footer-bottom { max-width: 1100px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 0.5px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.28); flex-wrap: wrap; gap: 0.5rem; }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-hamburger { display: block; }
+    .hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 1.25rem 2.5rem; }
+    h1 { font-size: 2.3rem; }
+    .stats-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .why-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    .step-arrow { display: none; }
+    .giving-header { grid-template-columns: 1fr; gap: 2rem; }
+    .tiers { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-bottom { flex-direction: column; }
+    h2 { font-size: 1.9rem; }
+    .urgency { font-size: 12px; }
+    .partners-section, .why-section, .giving-section, .faq-section { padding-left: 1.25rem; padding-right: 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Cancer Se <span>Pehle</span> Suraksha</div>
+  <div class="nav-links">
+    <a href="#why">Why This</a>
+    <a href="#how">How It Works</a>
+    <a href="#give">Give</a>
+    <a href="#story">Our Story</a>
+    <a class="nav-cta" href="#give">Donate Now</a>
+  </div>
+  <button class="nav-hamburger" onclick="toggleMenu()">&#9776;</button>
+</nav>
+
+<div class="urgency">
+  <strong>India's government just launched HPV vaccination — for 14-year-olds only.</strong> We are reaching the 9–13 year olds in tribal ashram schools who are being left behind.
+</div>
+
+<section class="hero">
+  <div>
+    <div class="hero-eyebrow">Lions District 3231 A3 &middot; June 2026&ndash;2027</div>
+    <h1>Preventing cervical cancer <em>before it starts</em></h1>
+    <p class="hero-sub">Vaccinating 1,500 girls aged 9–13 in tribal ashram schools across Palghar and Mumbai — reaching the girls the government's current rollout doesn't yet cover.</p>
+    <div class="hero-actions">
+      <a href="#give" class="btn-primary">Protect a girl today</a>
+      <a href="#why" class="btn-ghost">Learn more &rarr;</a>
+    </div>
+  </div>
+  <div>
+    <div class="hero-card">
+      <div class="hero-stat-row">
+        <div class="hero-stat">
+          <div class="hero-stat-num">1,500<sup>+</sup></div>
+          <div class="hero-stat-label">Girls to vaccinate</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">10</div>
+          <div class="hero-stat-label">Ashram schools</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">&#x20B9;50L</div>
+          <div class="hero-stat-label">Total goal</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">1</div>
+          <div class="hero-stat-label">Year program</div>
+        </div>
+      </div>
+      <div class="progress-section">
+        <div class="progress-label"><span>Fundraising progress</span><strong id="pct">Just launched</strong></div>
+        <div class="progress-bar"><div class="progress-fill" id="pbar"></div></div>
+        <div style="font-size:11px; color:var(--muted); margin-top:6px;">Goal: &#x20B9;49,61,000 &middot; ~$60,000 USD</div>
+      </div>
+      <div class="hero-tag">&#128197; June 2026 &ndash; June 2027 &middot; Palghar &amp; Mumbai Districts</div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-section">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-num">77K</div>
+      <div class="stat-label">Women die of cervical cancer in India every year</div>
+    </div>
+    <div>
+      <div class="stat-num">70%</div>
+      <div class="stat-label">Of cases caused by HPV strains preventable through vaccination</div>
+    </div>
+    <div>
+      <div class="stat-num">9&ndash;14</div>
+      <div class="stat-label">Optimal age window per WHO and India's NTAGI</div>
+    </div>
+    <div>
+      <div class="stat-num">&lt;2%</div>
+      <div class="stat-label">National screening coverage among at-risk women in India</div>
+    </div>
+  </div>
+</section>
+
+<section class="why-section" id="why">
+  <div class="section-tag">Why this matters</div>
+  <h2>The girls the government<br>hasn't reached yet</h2>
+  <div class="why-grid">
+    <div>
+      <div class="why-card">
+        <div class="why-icon">&#127957;</div>
+        <h3>Tribal ashram schools in Palghar</h3>
+        <p>Girls in residential ashram schools travel 50–75km for basic care. They are among the most underserved communities in Maharashtra and the least likely to access a government health facility independently.</p>
+      </div>
+      <div class="why-card" style="margin-top:1rem;">
+        <div class="why-icon">&#127919;</div>
+        <h3>School-based delivery reaches them</h3>
+        <p>By bringing vaccination camps directly to the schools, we eliminate every barrier — transport, awareness, cost, and time. No girl needs to travel anywhere.</p>
+      </div>
+    </div>
+    <div>
+      <div class="why-card">
+        <div class="why-icon">&#128137;</div>
+        <h3>The clinically optimal age window</h3>
+        <p>WHO and NTAGI recommend ages 9–14 as the optimal window for HPV vaccination. Girls in this cohort mount a stronger immune response than older adolescents — meaning earlier vaccination means stronger lifetime protection.</p>
+      </div>
+      <div class="govt-callout">
+        <p><strong>India's national HPV campaign launched February 28, 2026 — targeting 14-year-olds only</strong> at government facilities. Maharashtra's statewide drive (March 8) also targets 14-year-olds only. Our initiative fills the gap for girls aged 9–13 in tribal ashram schools who won't be reached this cycle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-section" id="how">
+  <div class="how-inner">
+    <div class="section-tag">How it works</div>
+    <h2>From identification to protection</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Identify schools</h4>
+        <p>Map residential ashram and municipal schools with girls aged 9–13 across Palghar and Mumbai districts</p>
+        <div class="step-arrow">&rarr;</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Consent &amp; readiness</h4>
+        <p>Parental consent collected in Marathi. Pre-vaccination counselling conducted by qualified medical teams on site</p>
+        <div class="step-arrow">&rarr;</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Vaccination camp</h4>
+        <p>Licensed doctors and nurses administer Gardasil by Merck — the same vaccine used in India's national programme — on-site at each school with ambulance on standby</p>
+        <div class="step-arrow">&rarr;</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Track &amp; follow up</h4>
+        <p>Full documentation, post-vaccination observation, and dose tracking to ensure every girl completes her schedule</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="giving-section" id="give">
+  <div class="giving-header">
+    <div class="giving-intro">
+      <div class="section-tag">Support the initiative</div>
+      <h2>Every rupee prevents a cancer</h2>
+      <p>Choose how you want to make an impact. US donors can give in dollars — all donations are tax-deductible through our giving partner GiveIndia.</p>
+    </div>
+    <div class="giving-progress">
+      <div class="gp-label">Campaign progress</div>
+      <div class="gp-amount">&#x20B9;0 <span>raised of &#x20B9;49,61,000</span></div>
+      <div class="gp-bar"><div class="gp-fill" id="gbar"></div></div>
+      <div class="gp-meta"><span>Be the first to give</span><span>~$60,000 USD goal</span></div>
+    </div>
+  </div>
+  <div class="tiers">
+    <div class="tier">
+      <div class="tier-icon">&#127807;</div>
+      <div class="tier-amount">&#x20B9;3,200</div>
+      <div class="tier-amount-usd">~$40 USD</div>
+      <div class="tier-name">Protect one girl</div>
+      <div class="tier-desc">Covers the full cost of vaccinating one girl — vaccine, medical staff, cold chain maintenance, and documentation.</div>
+      <a href="mailto:bankadarshana@gmail.com?subject=Donation - Protect One Girl&body=Hi Darshana, I would like to donate to protect one girl. Please send me the giving link." class="tier-btn outline">Donate &#x20B9;3,200</a>
+    </div>
+    <div class="tier featured">
+      <div class="tier-badge">Most popular</div>
+      <div class="tier-icon">&#127957;</div>
+      <div class="tier-amount">&#x20B9;45,000</div>
+      <div class="tier-amount-usd">~$550 USD</div>
+      <div class="tier-name">Sponsor a camp</div>
+      <div class="tier-desc">Funds one full vaccination camp — covering all costs for 15 girls including ambulance on standby, licensed doctors, and cold chain logistics.</div>
+      <a href="mailto:bankadarshana@gmail.com?subject=Donation - Sponsor a Camp&body=Hi Darshana, I would like to sponsor a vaccination camp. Please send me the giving link." class="tier-btn primary">Donate &#x20B9;45,000</a>
+    </div>
+    <div class="tier">
+      <div class="tier-icon">&#127979;</div>
+      <div class="tier-amount">&#x20B9;4,96,100</div>
+      <div class="tier-amount-usd">~$6,000 USD</div>
+      <div class="tier-name">Sponsor a school</div>
+      <div class="tier-desc">The full cost of vaccinating 150 girls across one residential school — a Bronze CSR partnership with co-branding and impact reporting included.</div>
+      <a href="mailto:bankadarshana@gmail.com?subject=Donation - Sponsor a School&body=Hi Darshana, I would like to sponsor a full school. Please send me the giving details." class="tier-btn outline">Donate &#x20B9;4,96,100</a>
+    </div>
+  </div>
+  <p class="giving-note">US donors: tax-deductible giving available via GiveIndia US &middot; All amounts in INR unless noted &middot; Questions? Email <a href="mailto:bankadarshana@gmail.com" style="color:var(--green);">bankadarshana@gmail.com</a></p>
+</section>
+
+<section class="story-section" id="story">
+  <div class="story-inner">
+    <div class="story-tag">Our story</div>
+    <h2>Why I built this</h2>
+    <p>I spend my days at work understanding why innovative medicines don't reach the patients who need them — navigating pricing, market access, and the commercial systems that determine who gets treated and who doesn't.</p>
+    <p>Cancer Se Pehle Suraksha started from a simple realization: <strong>a vaccine that prevents cervical cancer already exists and can protect girls for life.</strong> The girls in Palghar's ashram schools don't have it — not because of science, but because of last-mile access gaps that money and coordination can close.</p>
+    <p>India's government just launched their HPV campaign — for 14-year-olds only. We are making sure the 9–13 year olds in tribal ashram schools don't get left behind.</p>
+    <div class="story-sig">
+      <strong>Darshana Banka</strong>
+      Leo Member, Lions Club of Mumbai Western &middot; Life Sciences Consultant, New York City
+    </div>
+  </div>
+</section>
+
+<div class="partners-section">
+  <div class="partners-label">In partnership with</div>
+  <div class="partners-row">
+    <div class="partner-pill">Lions International District 3231 A3</div>
+    <div class="partner-pill">Lions Club of Mumbai Western</div>
+  </div>
+</div>
+
+<section class="faq-section">
+  <div class="section-tag">Questions</div>
+  <h2>Common questions</h2>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">Is it safe to vaccinate girls aged 9–13? <span class="faq-toggle">+</span></div>
+    <div class="faq-a">Yes — WHO and India's NTAGI both recommend ages 9–14 as the optimal vaccination window. Girls in this age group mount a stronger immune response than older adolescents, making early vaccination clinically superior, not just acceptable.</div>
+  </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How is this different from the government's campaign? <span class="faq-toggle">+</span></div>
+    <div class="faq-a">India's national HPV campaign launched February 28, 2026 targets only 14-year-olds at government facilities. Maharashtra's statewide drive (March 8) also targets 14-year-olds only. We are reaching girls aged 9–13 in tribal ashram schools in Palghar — a cohort and geography the current rollout does not cover.</div>
+  </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">Can I donate from the US? <span class="faq-toggle">+</span></div>
+    <div class="faq-a">Yes — US donors can give in dollars through GiveIndia's US portal, which is tax-deductible. Email bankadarshana@gmail.com for the direct giving link and a receipt.</div>
+  </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">Which vaccine is being used? <span class="faq-toggle">+</span></div>
+    <div class="faq-a">We use Gardasil, a quadrivalent HPV vaccine by Merck — the same vaccine used in India's national government campaign. It is approved by India's drug regulator and covers HPV types 16 and 18, which cause over 80% of cervical cancer cases in India.</div>
+  </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How will my donation be used? <span class="faq-toggle">+</span></div>
+    <div class="faq-a">100% of donations go toward vaccine procurement, licensed medical staff, cold chain logistics, ambulance on standby, documentation, and community awareness. Admin costs are capped at 10% of the total budget.</div>
+  </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How do I get involved beyond donating? <span class="faq-toggle">+</span></div>
+    <div class="faq-a">We welcome Lions members, healthcare professionals, and community volunteers. You can also share this page — every share reaches potential donors. Email bankadarshana@gmail.com to discuss collaboration.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Cancer Se <span>Pehle</span> Suraksha</div>
+      <div class="footer-desc">A Lions Club of Mumbai Western initiative to vaccinate 1,500 girls against cervical cancer in tribal ashram schools across Palghar and Mumbai. June 2026 – June 2027.</div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="#why">Why this</a>
+      <a href="#how">How it works</a>
+      <a href="#give">Give</a>
+      <a href="#story">Our story</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:bankadarshana@gmail.com">bankadarshana@gmail.com</a>
+      <a href="tel:+18484821313">+1 848 482 1313</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Cancer Se Pehle Suraksha &middot; Lions District 3231 A3</span>
+    <span>Made with purpose in New York &amp; Mumbai</span>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(el) {
+    var a = el.querySelector('.faq-a');
+    var t = el.querySelector('.faq-toggle');
+    var isOpen = a.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(function(x) { x.classList.remove('open'); });
+    document.querySelectorAll('.faq-toggle').forEach(function(x) { x.textContent = '+'; });
+    if (!isOpen) { a.classList.add('open'); t.textContent = '\u2212'; }
+  }
+  function toggleMenu() {
+    var links = document.querySelector('.nav-links');
+    if (links.style.display === 'flex') {
+      links.style.display = 'none';
+    } else {
+      links.style.display = 'flex';
+      links.style.flexDirection = 'column';
+      links.style.position = 'absolute';
+      links.style.top = '64px';
+      links.style.left = '0';
+      links.style.right = '0';
+      links.style.background = 'rgba(253,252,248,0.98)';
+      links.style.padding = '1rem 2rem';
+      links.style.borderBottom = '0.5px solid rgba(0,0,0,0.09)';
+      links.style.gap = '1rem';
+      links.style.zIndex = '99';
+    }
+  }
+</script>
+</body>
+</html>
