@@ -98,14 +98,17 @@ h2 { font-size: 2.5rem; font-weight: 600; color: var(--navy); line-height: 1.2; 
 .callout strong { color: var(--amber); }
 
 /* HOW */
-.how-section { background: var(--light-gray); padding: 6rem 2rem; }
+.how-section { background: var(--navy); padding: 6rem 2rem; }
 .how-inner { max-width: 1100px; margin: 0 auto; }
-.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem; }
-.step { position: relative; }
-.step-num { width: 52px; height: 52px; background: var(--magenta); color: white; display: flex; align-items: center; justify-content: center; font-family: 'Lora', serif; font-size: 22px; font-weight: 600; margin-bottom: 1.25rem; }
-.step h4 { font-size: 18px; color: var(--navy); margin-bottom: 0.75rem; font-weight: 600; }
-.step p { font-size: 16px; color: var(--muted); line-height: 1.7; }
-.step-arrow { position: absolute; right: -1rem; top: 1.5rem; color: var(--border); font-size: 22px; }
+.how-section .section-label { color: var(--amber); }
+.how-section h2 { color: white; }
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 3rem; border: 1px solid rgba(255,255,255,0.12); }
+.step { padding: 2.5rem 2rem; border-right: 1px solid rgba(255,255,255,0.12); }
+.step:last-child { border-right: none; }
+.step-num { font-family: 'Lora', serif; font-size: 13px; font-weight: 600; color: var(--amber); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
+.step h4 { font-size: 18px; color: white; margin-bottom: 0.75rem; font-weight: 600; }
+.step p { font-size: 16px; color: rgba(255,255,255,0.65); line-height: 1.7; }
+.step-arrow { display: none; }
 
 /* GIVING */
 .giving-section { background: white; padding: 6rem 2rem; }
@@ -183,7 +186,8 @@ footer { background: var(--navy); color: white; padding: 5rem 2rem 2.5rem; }
   .stat-box:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.1); border-top: 1px solid rgba(255,255,255,0.1); }
   .stat-box:nth-child(4) { border-right: none; border-top: 1px solid rgba(255,255,255,0.1); }
   .why-grid { grid-template-columns: 1fr; }
-  .steps { grid-template-columns: 1fr 1fr; }
+  .steps { grid-template-columns: 1fr 1fr; border: none; }
+  .step { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); padding: 2rem 1.5rem; }
   .step-arrow { display: none; }
   .tiers { grid-template-columns: 1fr 1fr; }
   .footer-inner { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -319,25 +323,22 @@ footer { background: var(--navy); color: white; padding: 5rem 2rem 2.5rem; }
     <h2>How we deliver vaccination to those who need it most</h2>
     <div class="steps">
       <div class="step">
-        <div class="step-num">1</div>
+        <div class="step-num">Step 01</div>
         <h4>Identify high-need communities</h4>
         <p>Map underserved communities with limited access to preventive healthcare across the Bandra to Talasari corridor</p>
-        <div class="step-arrow">&rarr;</div>
       </div>
       <div class="step">
-        <div class="step-num">2</div>
+        <div class="step-num">Step 02</div>
         <h4>Consent &amp; readiness</h4>
         <p>Parental consent collected in Marathi. Pre-vaccination counselling by qualified medical teams on site</p>
-        <div class="step-arrow">&rarr;</div>
       </div>
       <div class="step">
-        <div class="step-num">3</div>
+        <div class="step-num">Step 03</div>
         <h4>Vaccination camp</h4>
         <p>Licensed doctors administer Gardasil by Merck — the same vaccine used in India's national programme — with full medical oversight</p>
-        <div class="step-arrow">&rarr;</div>
       </div>
       <div class="step">
-        <div class="step-num">4</div>
+        <div class="step-num">Step 04</div>
         <h4>Track &amp; follow up</h4>
         <p>Full documentation and post-vaccination observation to ensure every girl completes her vaccination schedule</p>
       </div>
